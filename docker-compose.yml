@@ -1,0 +1,21 @@
+version: "3"
+services:
+  db:
+    image: postgres
+    environment:
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_USER: postgres
+      POSTGRES_DB: highsnobiety
+    volumes:
+      - ./pgdata:/var/lib/postgresql/data
+    ports:
+      - '5432:5432'
+  product-etl:
+    image: product-etl
+    build:
+          context: .
+          dockerfile: Dockerfile
+    depends_on:
+      - db
+
+# docker run -it product-etl python main.py

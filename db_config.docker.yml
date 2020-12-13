@@ -1,0 +1,5 @@
+postgres:
+  host: "db"
+  database: "highsnobiety"
+  user: "postgres"
+  password: "postgres"

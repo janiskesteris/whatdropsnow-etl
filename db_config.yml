@@ -1,0 +1,4 @@
+host: "localhost"
+database: "highsnobiety"
+user: "postgres"
+port: 5432
