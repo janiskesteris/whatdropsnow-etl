@@ -17,5 +17,3 @@ services:
           dockerfile: Dockerfile
     depends_on:
       - db
-
-# docker run -it product-etl python main.py

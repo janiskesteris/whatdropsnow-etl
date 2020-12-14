@@ -2,9 +2,8 @@
 __pycache__/
 .vscode
 .env
+pgdata
 *.csv
 !tests/fixtures/*.csv
 *.parquet
-pgdata
 data
-questions.txt
