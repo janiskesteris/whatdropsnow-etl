@@ -47,7 +47,7 @@ Module with functions related to What Drops Now API handling. Implements both ge
 **ITERATION_CHUNK_SIZE** - purly to report back the status requests for offers and retailers are chunked and after each chunk is finished status report is printed
 
 ### db.py
-Using sqlalchemy defines ORM declarative metaclasses for each API resource. Expand metaclases to include the parsing method `format_data()` for each resource. As well as implements `upsert` method used in callback function for persisting data adding new records otherwise updating if they already exists.
+Using sqlalchemy defines ORM declarative metaclasses for each API resource. Expand metaclases to include the parsing method `parse_data()` for each resource. As well as implements `upsert` method used in callback function for persisting data adding new records otherwise updating if they already exists.
 
 ### sql.py
 Implements query to cluster retailers and print them out.

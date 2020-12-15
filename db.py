@@ -76,7 +76,7 @@ class Retailer(Base):
     website = Column(String)
     updated_at = Column(DateTime)
 
-    def format_data(data):
+    def parse_data(data):
         return {
             "id": int(data["id"]),
             "name": data["attributes"]["name"],
@@ -96,7 +96,7 @@ class Offer(Base):
     price_eur = Column(Numeric)
     updated_at = Column(DateTime)
 
-    def format_data(data):
+    def parse_data(data):
         return [
             {
                 "id": record["id"],
@@ -120,7 +120,7 @@ class Brand(Base):
     website = Column(String)
     updated_at = Column(DateTime)
 
-    def format_data(data):
+    def parse_data(data):
         return [
             {
                 "id": int(record["id"]),
@@ -143,7 +143,7 @@ class Product(Base):
     brand_names = Column(String)
     updated_at = Column(DateTime)
 
-    def format_data(data):
+    def parse_data(data):
         return [
             {
                 "id": int(record["id"]),

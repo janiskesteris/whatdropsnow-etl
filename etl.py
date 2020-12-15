@@ -9,7 +9,7 @@ engine = db.connect_db()
 session = db.session()
 
 def persist_data(meta_class, data):
-    db.upsert(meta_class, engine, meta_class.format_data(data))
+    db.upsert(meta_class, engine, meta_class.parse_data(data))
 
 def filter_out_recently_added(meta_class, data, match_field='id'):
     recently_updated_records = session.query(meta_class).filter(meta_class.updated_at > one_day_ago).all()
