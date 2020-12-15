@@ -19,6 +19,9 @@ docker-compose build && docker-compose up
 
 ## Implementation details
 
+### architecture diagram
+![highsnobiety-Page-1](https://user-images.githubusercontent.com/2915290/102107992-a7d56880-3e32-11eb-92e1-0e79094e8ff6.png)
+
 ### etl.py
 Main execution script file. Orchestrates the ETL, fetchign data from API and persisting it. Skips recently ETLed data.
 
